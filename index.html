@@ -4,11 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="stylesheet" href="try.css">
+    <style>
+        .main-body{
+            margin: 0; 
+            background-color: rgb(239, 226, 226);
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: space-between; 
+            align-items: center;
+        }
+
+        .la{
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: rgb(220, 187, 169);
+        }
+
+        .sk{
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: rgb(220, 184, 161);
+        }
+
+        .left{
+            
+            width: 50%;
+            padding-right: 15px;
+            padding-left: 30px;
+            padding-block-end: 15px;
+            padding-top: 15px;
+        }
+
+        .right{
+            
+            width: 70%;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-block-end: 15px;
+            padding-top: 15px;
+        }
+
+        .kopf{
+            border-color: black;
+            border-radius: 5px;
+            border: 1px solid;
+        }
+
+        .skills{
+            width: 50%;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-block-end: 15px;
+            padding-top: 15px;
+        }
+
+        .lang{
+            width: 50%;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-block-end: 15px;
+            padding-top: 15px;
+        }
+        
+
+    </style>
 </head>
-<body style="margin: 0; background-color: grey;">
+<body class="main-body">
     <div>
-        <div style="background-color: cadetblue; display: inline-block">
+        <div style="background-color: rgb(237, 187, 167); display: inline-block;" class="left">
             <p>
                 <img src="https://i.pinimg.com/236x/fa/68/26/fa68266e4bcac979a85327dfe621938c.jpg">
                 <!--картинка-->
@@ -31,7 +97,7 @@
                         <tr>
                             <td>github</td>
                             <td><span style="visibility:hidden">_</span></td>
-                            <td>https://github.com/varvarvarletconst</td>
+                            <td><a href="https://github.com/varvarvarletconst">https://github.com/varvarvarletconst</a></td>
                             <!--не забудь здесь сделать ссылку-->
                         </tr>
                     </tbody>
@@ -71,25 +137,27 @@
                 </div>
 
                 <div>
-                    <button><a href="greeting.html">send</a></button>
+                    <button><a href="greetings.html">send</a></button>
                 </div>
             </form>
         </div>
 
-        <div style="background-color:darkgreen; display: inline-block">
+        <div style="background-color:rgb(218, 186, 175); display: inline-block;" class="right">
             <h1>
                 Varvara Kotelnikova
             </h1>
             <p>
-                I am currently a bioinformatics student at Saarland University, where I am actively engaged in expanding my knowledge and skills. <br>
-                I am known for my friendly and reliable nature, and I am always eager to embrace new learning opportunities.
+                I am currently a bioinformatics student at Saarland University, <br>
+                where I am actively engaged in expanding my knowledge and skills. <br>
+                I am known for my friendly and reliable nature, <br>
+                and I am always eager to embrace new learning opportunities.
             </p>
 
             <h2>education</h2>
             <table>
                 <tbody>
                     <tr>
-                        <td>Saarland University</td>
+                        <td class="kopf"><a style="display: table-cell; vertical-align: middle;">Saarland University</a></td>
                         <td><span style="visibility:hidden">_</span></td>
                         <td>taken courses: <br>
                             Mathematik-Vorkurs <br>
@@ -100,18 +168,18 @@
                             Hands-On Dependability</td>
                     </tr>
                     <tr>
-                        <td>online bootcamp</td>
+                        <td class="kopf"><a style="display: table-cell; vertical-align: middle;">online bootcamp</a></td>
                         <td><span style="visibility:hidden">_</span></td>
                         <td>HTML, CSS, JavaScript</td>
                     </tr>
                     <tr>
-                        <td>University of Potsdam</td>
+                        <td class="kopf"><a style="display: table-cell; vertical-align: middle;">University of Potsdam</a></td>
                         <td><span style="visibility:hidden">_</span></td>
                         <td>programming (C++) and mathematics courses <br>
                             physics practice</td>
                     </tr>
                     <tr>
-                        <td>Studienkolleg Saxony at the University of Leipzig</td>
+                        <td class="kopf"><a style="display: table-cell; vertical-align: middle;">Studienkolleg at the University of Leipzig</a></td>
                         <td><span style="visibility:hidden">_</span></td>
                         <td>physics <br>
                             German <br>
@@ -123,32 +191,37 @@
                 </tbody>
             </table>
 
-            <h2>skills</h2>
-            <ul>
-                <li>JavaScript</li>
-                <li>C#</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>HTML and CSS</li>
-                <li>Excel</li>
-             </ul>
-                <!--убрать буллеты-->
+            <div class="skills">
+                <h2>skills</h2>
+                <ul>
+                    <li class="sk">JavaScript</li>
+                    <li class="sk">C#</li>
+                    <li class="sk">C++</li>
+                    <li class="sk">Python</li>
+                    <li class="sk">HTML and CSS</li>
+                    <li class="sk">Excel</li>
+                 </ul>
+            </div>  
 
-            <h2>languages</h2>
-            <ul>
-                <li>russian - native speaker</li>
-                <li>german - C1</li>
-                <li>english - B1</li>
-            </ul>
+            <div class="lang">
+                <h2>languages</h2>
+                <ul>
+                    <li class="la">russian - native speaker</li>
+                    <li class="la">german - C1</li>
+                    <li class="la">english - B1</li>
+                </ul>
+            </div> 
+            
 
-        </div>
-    </div>
+        </div> 
 
-    <footer>
+        
+
+    <!--<footer>
         <adress>
             this form was made for educational purposes by a bioinformatics student 
             please hire me
         </adress>
-    </footer>
+    </footer>-->
 </body>
 </html>
